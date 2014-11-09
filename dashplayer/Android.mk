@@ -36,8 +36,8 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/frameworks/av/media/libstagefright/include             \
 	$(TOP)/frameworks/av/media/libstagefright/mpeg2ts             \
 	$(TOP)/frameworks/av/media/libstagefright/rtsp                \
-	$(TOP)/hardware/qcom/media/mm-core/inc                        \
-	$(TOP)/hardware/qcom/display/libgralloc                       \
+	$(TOP)/$(call project-path-for,qcom-media)/$(TARGET_BOARD_PLATFORM)/mm-core/inc                        \
+	$(TOP)/$(call project-path-for,qcom-display)/$(TARGET_BOARD_PLATFORM)/libgralloc                       \
         $(LOCAL_PATH)/../QCMediaPlayer/native                         \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 
@@ -57,4 +57,3 @@ ifndef TARGET_DISABLE_DASH
  include $(BUILD_SHARED_LIBRARY)
 endif
 endif
-
